@@ -1,0 +1,300 @@
+\documentclass[10pt, letterpaper]{article}
+\usepackage[
+    ignoreheadfoot,
+    top= 0.7cm,
+    bottom=1cm,
+    left=1cm,
+    right=1cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage[explicit]{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Muhammad HUZAIFA's CV},
+    pdfauthor={Muhammad Huzaifa},
+    pdfcreator={Huzaifa},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro}
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\makeatletter
+\titleformat{\section}{
+    \needspace{4\baselineskip}
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[]
+
+\titlespacing{\section}{
+    -1pt
+}{
+    0.3 cm
+}{
+    0.2 cm
+}
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+}
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+\begin{document}
+\newcommand{\AND}{\unskip
+	\cleaders\copy\ANDbox\hskip\wd\ANDbox
+	\ignorespaces
+}
+\newsavebox\ANDbox
+\sbox\ANDbox{}
+
+\begin{header}
+	\centering
+	\fontsize{30pt}{30pt}\selectfont
+	\textbf{Muhammad Huzaifa}
+
+	\vspace{0.4cm}
+
+	\normalsize
+	\hrefWithoutArrow{mailto:theehuzaifa@gmail.com}{{\faEnvelope[regular]}\hspace{0.01cm} theehuzaifa@gmail.com} \quad
+	{\faPhone*} \hspace{0.01cm} 0300-7005268 \quad
+	\hrefWithoutArrow{https://portfolio-nine-fawn-23.vercel.app/}{{\faLink}\hspace{0.01cm} Portfolio} \quad
+	\hrefWithoutArrow{https://www.linkedin.com/in/muhammad-huzaifa-ali-49aa94259/}{{\faLinkedinIn} \hspace{0.01cm}  Linkedin} \quad
+	\hrefWithoutArrow{https://github.com/rogueinnovator}{{\faGithub}\hspace{0.01cm}  rogueinnovator} \quad
+	{\faMapMarker*} Peshawar, Pakistan
+\end{header}
+\vspace{0.3 cm - 0.3 cm}
+\section{Summary}
+
+Experienced Full-Stack Developer with expertise in the MERN stack  and TypeScript. Skilled in building scalable web applications, developing RESTful APIs, and managing state with Redux and Context API. Strong background in authentication (JWT, OAuth) and database management (MongoDB, PostgreSQL). Passionate about writing clean, maintainable code and optimizing performance for seamless user experiences. Familiar with deployment on platforms like AWS and Vercel.
+\section{Skills}
+\begin{highlights}
+	\item \textbf{Frontend Development:} React.js, Next.js, Svelte, Tailwind CSS, Shadcn/UI, Redux, Context API, GSAP
+	\item \textbf{Backend Development:} Node.js, Express.js, RESTful APIs, Prisma ORM, Knex.js
+	\item \textbf{Programming Languages:} JavaScript (ES6+), TypeScript, C++, Solidity
+	\item \textbf{Blockchain/Web3:} Ethereum, Web3.js, Ethers.js, Hardhat, Truffle, Ganache, Smart Contracts
+	\item \textbf{Databases:} PostgreSQL, MongoDB, Firebase
+	\item \textbf{Testing:} Mocha, Chai, Unit Testing, Integration Testing
+	\item \textbf{Development Tools:} Git, GitHub, Docker, LaTeX, Postman
+	\item \textbf{Operating Systems:} Linux
+\end{highlights}
+% Experience
+\section{Experience}
+
+\begin{twocolentry}{
+		JB Tower, Peshawar \\
+	}
+	\textbf{OIRRC — Junior web Developer}
+	\begin{highlights}
+		\item Developed scalable full-stack applications using \textbf{Next.js}, handling both client-side and server-side logic.
+		\item maintained relational databases using \textbf{PostgreSQL} for optimized data management.
+		\item Integrated \textbf{Prisma ORM} for efficient database modeling, migrations, and queries.
+		\item Utilized \textbf{Docker} to containerize applications and manage PostgreSQL database environments, ensuring streamlined deployment and scalability.
+	\end{highlights}
+\end{twocolentry}
+
+\begin{twocolentry}{
+		Satellite Town, Rawalpindi\\
+		\textit{Present}
+	}
+	\textbf{Code Crush — MERN Stack Developer}
+	\begin{highlights}
+		\item Designed and developed 4 full-stack web applications using the MERN stack
+		\item Developed RESTful APIs with Express.js, serving data to React frontend
+		\item Implemented JWT authentication and authorization systems, enhancing application security
+		\item Improved authentication flows with OAuth 2.0 and better auth for secure third-party logins
+		\item Optimized MongoDB queries and indexes, improving database performance by 35\%
+		\item Improved backend performance and reusability by implementing aggregation pipelines
+		\item Improved reusability by using closures to create generic API-calling hooks
+		\item Designed scalable backend with MVC, TypeScript, and ES modules
+	\end{highlights}
+\end{twocolentry}
+\section{Projects}
+\vspace{1em}
+% Blockchain-Based Criminal Information Management System
+\begin{twocolentry}{
+		\href{https://github.com/rogueinnovator/blockchain-based-criminal-information-managment-system}{GitHub}
+	}{
+		\textbf{Blockchain Criminal Records System}
+	}
+	\begin{highlights}
+		\item Led development of blockchain-powered platform for secure criminal record management using CNIC and facial recognition
+		\item Implemented smart contracts for immutable record storage with role-based access control
+		\item \textbf{Technologies:} Next.js, Tailwind CSS, MongoDB, Ganache, Truffle, Solidity
+	\end{highlights}
+\end{twocolentry}
+\vspace{1em}
+% Decentralized Chatting App
+\begin{twocolentry}{
+		\href{https://github.com/rogueinnovator/d-chat-app}{GitHub}
+	}{
+		\textbf{II. Decentralized Chatting App}
+	}
+	\begin{highlights}
+		\item Built a secure, blockchain-based messaging platform ensuring decentralized communication.
+		\item Implemented smart contract logic for real-time message validation and storage.
+		\item \textbf{Technologies:} Next.js, Hardhat, CSS.
+	\end{highlights}
+\end{twocolentry}
+\vspace{1em}
+% Uber Clone
+\begin{twocolentry}{
+		\href{https://github.com/rogueinnovator/Uber_clone}{GitHub}
+	}{
+		\textbf{III. Uber Clone}
+	}
+	\begin{highlights}
+		\item Build a full-stack Uber-like application with real-time location tracking and ride booking.
+		\item Integrated Google Maps API for live routing and geolocation services.
+		\item \textbf{Technologies:} React.js, Google Maps API, MongoDB, Node.js, Express, GSAP, Tailwind CSS.
+	\end{highlights}
+\end{twocolentry}
+\vspace{1em}
+% Xplore (Hotel Management System)
+\begin{twocolentry}{
+		\href{https://xplorepk.com/}{GitHub}
+	}{
+		\textbf{IV. Xplore (Hotel Management System)}
+	}
+	\begin{highlights}
+		\item Developed a robust hotel management platform tailored for the tourism industry.
+		\item Created modules for booking management, customer feedback, and real-time room availability.
+		\item \textbf{Technologies:} React.js, Express.js, Tailwind CSS, MongoDB, AWS.
+	\end{highlights}
+\end{twocolentry}
+\vspace{1em}
+% Desktop Application
+\begin{twocolentry}{
+		\href{https://github.com/rogueinnovator/desktop-app}{GitHub}
+	}{
+		\textbf{V. Desktop Application}
+	}
+	\begin{highlights}
+		\item Built a cross-platform desktop application integrating Electron.js and React.js.
+		\item Used SQLite as a serverless database with Knex.js for optimized queries.
+		\item \textbf{Technologies:} React.js, Electron.js, Knex.js, SQLite, Node.js.
+	\end{highlights}
+\end{twocolentry}
+\vspace{1em}
+% Media Display and Sender Apps
+\begin{twocolentry}{
+		\href{https://github.com/rogueinnovator/IOTBoardMediaUploader}{GitHub}
+	}{
+		\textbf{VIII. Media Display and Sender Apps}
+	}
+	\begin{highlights}
+		\item Created two client applications to manage and display media on Android TV boxes.
+		\item Developed a Media Display App to show content with title and timestamps, supporting automatic and manual media deletion.
+		\item Built a Media Sender App enabling users to select and send media to specific devices through Firebase in real-time.
+		\item Implemented secure user authentication and data transmission.
+		\item \textbf{Technologies:} Next.js, Firebase, Tailwind CSS, Node.js, TypeScript.
+	\end{highlights}
+\end{twocolentry}
+\section{Education}
+
+\begin{threecolentry}{}{
+		2020 – 2024
+	}
+	\textbf{Bachelor of Computer Science} \\
+	University of Peshawar \\
+	Relevant Coursework: Data Structures, Algorithms, Database Systems, Web Development, Blockchain Fundamentals
+\end{threecolentry}
+
+% \section{Certifications}
+% \begin{highlights}
+% 	\item \textbf{Blockchain Developer Nanodegree} - Udacity (2023)
+% 	\item \textbf{AWS Certified Cloud Practitioner} - Amazon Web Services (2023)
+% 	\item \textbf{Full Stack Web Development} - Code Crush (2022)
+% \end{highlights}
+
+
+\end{document}
