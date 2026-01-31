@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# But allow directories (so git can traverse)
+!*/
+
+# Allow only these files
+!Muhammad_Huzaifa.tex
+!Muhammad_Huzaifa.pdf
+!.gitignore
