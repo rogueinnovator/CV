@@ -129,6 +129,9 @@
 
 \let\hrefWithoutArrow\href
 \renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+\newcounter{projectcounter}
+\newcommand{\projecttitle}[1]{\stepcounter{projectcounter}\Roman{projectcounter}. #1}
 \begin{document}
 \newcommand{\AND}{\unskip
 	\cleaders\copy\ANDbox\hskip\wd\ANDbox
@@ -175,30 +178,6 @@ Proven track record of delivering successful projects for multiple companies and
 \end{highlights}
 % Experience
 \section{Experience}
-
-\begin{twocolentry}{
-		JB Tower, Peshawar \\
-	}
-	\textbf{OIRRC — Junior web Developer}
-	\begin{highlights}
-		\item Developed scalable full-stack applications using \textbf{Next.js}, handling both client-side and server-side logic.
-		\item maintained relational databases using \textbf{PostgreSQL} for optimized data management.
-		\item Integrated \textbf{Prisma ORM} for efficient database modeling, migrations, and queries.
-		\item Utilized \textbf{Docker} to containerize applications and manage PostgreSQL database environments, ensuring streamlined deployment and scalability.
-	\end{highlights}
-\end{twocolentry}
-
-\begin{twocolentry}{
-		Satellite Town, Rawalpindi\\
-		% \textit{Present}
-	}
-	\textbf{Code Crush — MERN Stack Developer}
-	\begin{highlights}
-		\item Designed and developed 4 full-stack web applications using the MERN stack
-		\item Developed RESTful APIs with Express.js, serving data to React frontend
-		\item Designed scalable backend with MVC, TypeScript, and ES modules
-	\end{highlights}
-\end{twocolentry}
 \begin{twocolentry}{
     G13/4, Islamabad\\
     \textit{Present}
@@ -212,12 +191,37 @@ Proven track record of delivering successful projects for multiple companies and
 \end{highlights}
 \end{twocolentry}
 
+\begin{twocolentry}{
+		Satellite Town, Rawalpindi\\
+		\textit{Present}
+	}
+	\textbf{Code Crush — MERN Stack Developer}
+	\begin{highlights}
+		\item Designed and developed 4 full-stack web applications using the MERN stack
+		\item Developed RESTful APIs with Express.js, serving data to React frontend
+		\item Designed scalable backend with MVC, TypeScript, and ES modules
+	\end{highlights}
+\end{twocolentry}
+
+
+\begin{twocolentry}{
+		JB Tower, Peshawar \\
+	}
+	\textbf{OIRRC — Junior web Developer}
+	\begin{highlights}
+		\item Developed scalable full-stack applications using \textbf{Next.js}, handling both client-side and server-side logic.
+		\item Maintained relational databases using \textbf{PostgreSQL} for optimized data management.
+		\item Integrated \textbf{Prisma ORM} for efficient database modeling, migrations, and queries.
+	\end{highlights}
+\end{twocolentry}
+
+
 \section{Projects}
 \vspace{1em}
 \begin{twocolentry}{
 		\href{http://osglobal.ownersjungle.com/}{Live}
 	}{
-		\textbf{I. Owner Global}
+		\textbf{\projecttitle{Owner Global}}
 	}
 \begin{highlights}
     \item Developed the whole frontend following the best practices and maintained scaleability
@@ -230,7 +234,7 @@ Proven track record of delivering successful projects for multiple companies and
 \begin{twocolentry}{
 		\href{https://osfrontend.ownersjungle.com/owner-inventory/dashboard}{Live}
 	}{
-		\textbf{II. Owner Universe Super Admin}
+		\textbf{\projecttitle{Owner Universe Super Admin}}
 	}
 \begin{highlights}
     \item Optimized backend code for seamless connectivity with remote instances and AWS RDS operations using an OOP-based architecture.
@@ -245,7 +249,7 @@ Proven track record of delivering successful projects for multiple companies and
 \begin{twocolentry}{
 		\href{https://dev.klic.gg}{Live}
 	}{
-		\textbf{III. Klic (Streming Web App)}
+		\textbf{\projecttitle{Klic (Streaming Web App)}}
 	}
 	\begin{highlights}
     \item Refactored both backend and frontend codebases to significantly improve performance, scalability, and maintainability.
@@ -255,17 +259,30 @@ Proven track record of delivering successful projects for multiple companies and
 \end{highlights}
 \end{twocolentry}
 \vspace{1em}
-% Xplore (Hotel Management System)
 \begin{twocolentry}{
-		\href{https://xplorepk.com/}{Live}
+		\href{https://leyloon.com/}{Live}
 	}{
-		\textbf{IV. Xplore (Hotel Management System)}
+		\textbf{\projecttitle{Leyloon}}
+	}
+\begin{highlights}
+    \item Developed a premium online jewelry platform enabling users to browse and customize bespoke moissanite and lab-grown diamond jewelry.
+    \item Implemented a custom jewelry design engine for selecting stone type, shape, size, and metal for a personalized customer experience.
+    \item Integrated an \textbf{AI jeweler} to guide users through their dream piece design process.
+    \item \textbf{Technologies:} Next.js, Next.js API Routes, TanStack Query, Radix UI, NodeMailer, Anime.js, Context API, VDB API.
+\end{highlights}
+\end{twocolentry}
+\vspace{1em}
+% On point
+\begin{twocolentry}{
+		\href{onpointwebapp.vercel.app/}{Live}
+	}{
+		\textbf{\projecttitle{On Point}}
 	}
 	\begin{highlights}
-		\item Developed a robust hotel management platform tailored for the tourism industry.
-		\item Created modules for booking management, customer feedback, and real-time room availability.
-		\item Improved backend performance and reusability by implementing aggregation pipelines
-		\item \textbf{Technologies:} React.js, Express.js, Tailwind CSS, MongoDB, AWS.
+		\item Built a full-stack web app acting as a wrapper for IRISCRM, handling complex business logic and CRM integration.
+		\item Implemented cron jobs using \textbf{Inngest} for automated monthly deal imports and calculated rep goals based on PTO and performance.
+        \item Developed a companion mobile app using \textbf{React Native} and \textbf{Nativewind}, integrating APIs from the Next.js backend for a unified experience.
+		\item \textbf{Technologies:} Next.js, React Native, Nativewind, Inngest, Tailwind CSS, IRIS APIs.
 	\end{highlights}
 \end{twocolentry}
 \vspace{1em}
@@ -273,7 +290,7 @@ Proven track record of delivering successful projects for multiple companies and
 \begin{twocolentry}{
 		\href{https://github.com/rogueinnovator/blockchain-based-criminal-information-managment-system}{GitHub}
 	}{
-		\textbf{v. Blockchain Criminal Records System}
+		\textbf{\projecttitle{Blockchain Criminal Records System}}
 	}
 	\begin{highlights}
 		\item Led development of blockchain-powered platform for secure criminal record management using CNIC and facial recognition
@@ -285,7 +302,7 @@ Proven track record of delivering successful projects for multiple companies and
 \begin{twocolentry}{
 		\href{https://github.com/rogueinnovator/d-chat-app}{GitHub}
 	}{
-		\textbf{VI. Decentralized Chatting App}
+		\textbf{\projecttitle{Decentralized Chatting App}}
 	}
 	\begin{highlights}
 		\item Built a secure, blockchain-based messaging platform ensuring decentralized communication.
@@ -294,26 +311,11 @@ Proven track record of delivering successful projects for multiple companies and
 	\end{highlights}
 \end{twocolentry}
 \vspace{1em}
-% Uber Clone
-\begin{twocolentry}{
-		\href{onpointwebapp.vercel.app/}{Live}
-	}{
-		\textbf{VII. On Point}
-	}
-	\begin{highlights}
-		\item Build a full-stack web app for a client named joshuwa hoffman that act as a wrapper for his IRISCRM.
-		\item  Implemented the cron jobs using inngest for monthly deals imports from the IRIS and other calculations.
-        \item  Implemented the caching and a seamless goal calculation of each rep  on the basis of their PTO, lifeline and performance 
-        \item  Also developed the mobile app in React Native using the same next backend
-		\item \textbf{Technologies:} Next.js, Inngest, Tailwind CSS, IRIS apis
-	\end{highlights}
-\end{twocolentry}
-\vspace{1em}
 % Desktop Application
 \begin{twocolentry}{
 		\href{https://github.com/rogueinnovator/desktop-app}{GitHub}
 	}{
-		\textbf{VIII. Desktop Application}
+		\textbf{\projecttitle{Desktop Application}}
 	}
 	\begin{highlights}
 		\item Built a cross-platform desktop application integrating Electron.js and React.js.
