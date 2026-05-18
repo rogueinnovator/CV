@@ -132,6 +132,13 @@
 
 \newcounter{projectcounter}
 \newcommand{\projecttitle}[1]{\stepcounter{projectcounter}\Roman{projectcounter}. #1}
+\newcommand{\projectcategory}[1]{%
+	\vspace{0.2em}
+	\begin{center}
+		\small\color{primaryColor}\textbf{\rule{0.28\linewidth}{0.4pt}\hspace{0.5em}#1\hspace{0.5em}\rule{0.28\linewidth}{0.4pt}}
+	\end{center}
+	\vspace{-0.45em}
+}
 \begin{document}
 \newcommand{\AND}{\unskip
 	\cleaders\copy\ANDbox\hskip\wd\ANDbox
@@ -157,42 +164,48 @@
 \end{header}
 \vspace{0.3 cm - 0.3 cm}
 \section{Summary}
-I’m a Full-Stack Engineer specializing in Next.js and the MERN stack, focused on building scalable, high-performance applications with clean architecture and great user experience. I also work with AI integrations, including RAG pipelines, vector databases, and secure backend systems that solve real business problems.
+Full-stack AI engineer with \textbf{3 years} of experience building scalable web, mobile, and AI applications. Skilled across modern technologies including \textbf{Next.js, React.js, React Native, Svelte, Vue.js, Node.js, FastAPI, PERN and  MERN Stack}.
+Delivered \textbf{15+ \hspace{0.01em} projects}, including \textbf{5+} end-to-end full-stack products from architecture and development to CI/CD pipeline setup, deployment, and production maintenance. Focused on building scalable systems while following industry-standard engineering practices and clean architecture principles.
+\vspace{0.5em}
+\\
+Experienced in client communication, requirement gathering, and translating business pain points into practical technical solutions. Worked directly with multiple clients to successfully deliver products aligned with their goals and expectations.
+\vspace{0.5em}
+
+\hrefWithoutArrow{https://muhammad-huzaifa-s-e.vercel.app}{Portfolio}
+reflects the range and quality of projects delivered across different domains and technologies.\vspace{0.5em}
+
 \section{Skills}
 \begin{highlights}
 
-\item \textbf{Programming Languages:} TypeScript, JavaScript (ES6+), Solidity, C++, Python
+	\item \textbf{Programming Languages:} TypeScript, JavaScript (ES6+), Solidity, Python
 
-\item \textbf{Frontend Development:} React.js, Next.js, Svelte, React Native, Expo, Tailwind CSS, NativeWind, SCSS, Redux, Shadcn/UI, GSAP
+	\item \textbf{Frontend Development:} React.js, Next.js, Svelte, React Native, Expo, Tailwind CSS, NativeWind, SCSS, Redux, Shadcn/UI, GSAP
 
-\item \textbf{Backend Development:} Node.js, FastAPI, Express.js, REST APIs, Prisma ORM, Knex.js, Redis, WebSockets, Server-Sent Events (SSE), Stripe, Inngest
+	\item \textbf{Backend Development:} Node.js, FastAPI, Express.js, REST APIs, Prisma ORM, Knex.js, Redis, WebSockets, Server-Sent Events (SSE), Stripe, Inngest
 
-\item \textbf{AI \& GenAI:} OpenAI API, Retrieval-Augmented Generation (RAG), Vector Embeddings, pgvector , Automation pipelines
+	\item \textbf{AI \& GenAI:} OpenAI API, Retrieval-Augmented Generation (RAG), Vector Embeddings, pgvector , Automation pipelines
 
-\item \textbf{Blockchain/Web3:} Ethereum, Ethers.js, Web3.js, Hardhat, Truffle, Ganache, Smart Contract Development
+	\item \textbf{Blockchain/Web3:} Ethereum, Ethers.js, Web3.js, Hardhat, Truffle, Ganache, Smart Contract Development
 
-\item \textbf{Databases:} PostgreSQL, MongoDB, Firebase, Supabase
+	\item \textbf{Databases:} PostgreSQL, MongoDB, Firebase, Supabase
 
-\item \textbf{Testing:} Mocha, Chai, Unit Testing, Integration Testing
+	\item \textbf{Testing:} Mocha, Chai, Unit Testing, Integration Testing
 
-\item \textbf{Cloud \& Deployment:} AWS EC2, AWS Lightsail, Docker, Vercel, Render, Linode
+	\item \textbf{Cloud \& Deployment:} AWS EC2, AWS Lightsail, Docker, Vercel, Render, Linode, CI CD pipelines, PM2, Clustering
 
-\item \textbf{Tools:} Git, GitHub, Postman, Linux
+	\item \textbf{Tools:} Git, GitHub, Postman, Linux
 
 \end{highlights}
 % Experience
 \section{Experience}
 \begin{twocolentry}{
-    G13/4, Islamabad\\
-    \textit{ May 2025 - Present}
-}
-\textbf{Red Star Technologies — Full Stack Developer}
-\begin{highlights}
-    \item Delivered high-quality, client-focused solutions across multiple projects as a MERN and Next.js developer.
-    \item Successfully closed and retained multiple clients through consistent delivery of robust and scalable applications.
-    \item Integrated AI-driven features into various client projects, enhancing functionality and user experience.
-    % \item Maintained a strong professional reputation through reliability, technical expertise, and commitment to excellence.
-\end{highlights}
+		G13/4, Islamabad\\
+		\textit{ May 2025 - Present}
+	}
+	\textbf{Red Star Technologies — Full Stack Developer}
+	\begin{highlights}
+
+		\item Delivered scalable client-focused applications as a MERN and Next.js developer, integrated AI-driven features, and maintained strong client retention through reliable high-quality delivery.	\end{highlights}
 \end{twocolentry}
 
 \begin{twocolentry}{
@@ -201,9 +214,7 @@ I’m a Full-Stack Engineer specializing in Next.js and the MERN stack, focused 
 	}
 	\textbf{Code Crush — MERN Stack Developer}
 	\begin{highlights}
-		\item Designed and developed 4 full-stack web applications using the MERN stack
-		\item Developed RESTful APIs with Express.js, serving data to React frontend
-		\item Designed scalable backend with MVC, TypeScript, and ES modules
+		\item Designed and developed 4 full-stack MERN applications, built RESTful APIs with Express.js for React frontends, and implemented scalable backend architectures using MVC, TypeScript, and ES modules.
 	\end{highlights}
 \end{twocolentry}
 
@@ -214,153 +225,164 @@ I’m a Full-Stack Engineer specializing in Next.js and the MERN stack, focused 
 	}
 	\textbf{OIRRC — Junior web Developer}
 	\begin{highlights}
-		\item Developed scalable full-stack applications using \textbf{Next.js}, handling both client-side and server-side logic.
-		\item Maintained relational databases using \textbf{PostgreSQL} for optimized data management.
-		\item Integrated \textbf{Prisma ORM} for efficient database modeling, migrations, and queries.
+		\item Developed scalable full-stack applications using \textbf{Next.js}, managed relational databases with \textbf{PostgreSQL}, and integrated \textbf{Prisma ORM} for efficient modeling, migrations, and querying.
 	\end{highlights}
 \end{twocolentry}
 
 
 \section{Projects}
-\vspace{1em}
+\vspace{0.2em}
+
+\projectcategory{FULL STACK}
 
 \begin{twocolentry}{
 		\href{http://osglobal.ownersjungle.com/}{Live}
 	}{
 		\textbf{\projecttitle{Owner Inventory}}
 	}
-\begin{highlights}
-\item Architected a multi-app ecosystem, enabling secure provisioning and seamless cross-platform synchronization of organizational data between \textbf{Owners Global} and the \textbf{Owners Inventory} client application.
-\item Integrated Server-Sent Events (SSE) to broadcast robust, real-time progress indicators for long-running, asynchronous server operations, significantly enhancing user feedback.
-\item Engineered a custom Single Sign-On (SSO) solution to facilitate seamless cross-domain authentication, centralizing the core authorization logic in \textbf{Node.js} while securely managing redirection paths via \textbf{PHP}.
-\item Developed a comprehensive, multi-platform user invitation module, featuring JWT-secured tokens, automated email dispatch via BullMQ, and cross-service webhook synchronization for streamlined organization onboarding and role-based access control.
-\item Integrated end-to-end payment processing via Stripe, successfully configuring the billing flow across the frontend and backend, handling complex Stripe webhooks, and managing subscription add-ons.
-    \item \textbf{Technologies:} Next.js, TypeScript, Node.js, Express.js, SES, PHP, Laravel, Blade, MySQL, Stripe, AWS (Lightsail, S3), Redis .
-\end{highlights}
+	\begin{highlights}
+		\item Architected a multi-tenant SaaS inventory ecosystem connecting \textbf{Owners Global} with the \textbf{Owners Inventory} client app, supporting secure tenant provisioning and cross-platform organization data synchronization.
+		\item Built custom SSO, JWT-secured invitations, automated email dispatch, SSE progress updates for long-running operations, and Stripe subscription billing with webhook handling.
+		\item \textbf{Technologies:} Next.js, TypeScript, Node.js, Express.js, SES, PHP, Laravel, Blade, MySQL, Stripe, AWS, Redis.
+	\end{highlights}
 \end{twocolentry}
-% Owner super admin
-% \begin{twocolentry}{
-% 		\href{https://osfrontend.ownersjungle.com/owner-inventory/dashboard}{Live}
-% 	}{
-% 		\textbf{\projecttitle{Owner Super Admin}}
-% 	}
-% \begin{highlights}
-%     \item Optimized backend code for seamless connectivity with remote instances and AWS RDS operations using an OOP-based architecture.
-%     \item Developed and integrated user impersonation functionality to enhance administrative capabilities.
-%     \item Applied industry best practices for code quality, version control, and streamlined deployment workflows.
-%     \item Resolved numerous frontend and backend bugs, improving system stability and user experience.
-%     \item \textbf{Technologies:} Next.js, Tailwind CSS, Node.js, TypeScript, Redux, AWS Services.
-% \end{highlights}
-% \end{twocolentry}
-% \vspace{1em}
-% Klic
 \begin{twocolentry}{
 		\href{https://dev.klic.gg}{Live}
 	}{
 		\textbf{\projecttitle{Klic (Streaming Web App)}}
 	}
 	\begin{highlights}
-    \item Refactored both backend and frontend codebases to significantly improve performance, scalability, and maintainability.
-    \item Resolved numerous critical bugs, enhancing application stability and ensuring high client satisfaction.
-    \item Implemented best practices for code quality, version control, and deployment workflows.
-    \item For low latency video streaming and interactive chating amazon IVS (Interactive video service ) is used
-    \item \textbf{Technologies:} Next.js, GraphQL, SCSS, Node.js, TypeScript, Redux, AWS services.
-\end{highlights}
+		\item Worked on a full-stack game streaming app with a \textbf{Next.js} frontend and \textbf{Node.js}/AWS Lambda backend, improving performance, scalability, and stability.
+		\item Integrated Amazon IVS for low-latency game streaming and interactive chat.
+		\item \textbf{Technologies:} Next.js, Node.js, AWS Lambda, GraphQL, SCSS, TypeScript, Redux, AWS IVS.
+	\end{highlights}
 \end{twocolentry}
-\vspace{1em}
+\begin{twocolentry}{
+		\href{https://osfrontend.ownersjungle.com/owner-inventory/dashboard}{Live}
+	}{
+		\textbf{\projecttitle{Owner Super Admin}}
+	}
+	\begin{highlights}
+		\item Built admin tooling for remote instance connectivity, AWS RDS operations, user impersonation, deployment workflows, and production bug fixes.
+		\item \textbf{Technologies:} Next.js, Tailwind CSS, Node.js, TypeScript, Redux, AWS.
+	\end{highlights}
+\end{twocolentry}
+
+
 % Kolabme
 \begin{twocolentry}{
-		\href{https:app.kolabme.com}{Live}
+		\href{https://app.kolabme.com}{Live}
 	}{
 		\textbf{\projecttitle{KolabMe (A health care platform)}}
 	}
 	\begin{highlights}
-    \item Developed a comprehensive health care platform enabling users to book appointments with doctors, manage their health records, and access telemedicine services.
-    \item Chat feature with real-time messaging between doctors and patients.
-    \item Admin dashboard for managing doctors, patients, appointments, and chat.
-    \item \textbf{Technologies:} React.js, Node.js, Express.js, Websockets, AWS, Redux.
-\end{highlights}
+		\item Developed a health care platform for appointments, telemedicine access, records, real-time doctor-patient chat, and admin controls.
+		\item \textbf{Technologies:} React.js, Node.js, Express.js, Websockets, AWS, Redux.
+	\end{highlights}
 \end{twocolentry}
-\vspace{1em}
+
+\begin{twocolentry}{
+		\href{https://onpointwebapp.vercel.app/}{Live}
+	}{
+		\textbf{\projecttitle{On Point}}
+	}
+	\begin{highlights}
+		\item Built a full-stack CRM wrapper for IRISCRM with automated monthly deal imports, rep goal calculations, and a React Native companion mobile app.
+		\item \textbf{Technologies:} Next.js, React Native, Nativewind, Inngest, Tailwind CSS, IRIS APIs.
+	\end{highlights}
+\end{twocolentry}
+
+\begin{twocolentry}{
+		\href{https://github.com/rogueinnovator/d-chat-app}{GitHub}
+	}{
+		\textbf{\projecttitle{Decentralized Chatting App}}
+	}
+	\begin{highlights}
+		\item Built a blockchain-based messaging platform with smart contract-backed message validation and decentralized communication.
+		\item \textbf{Technologies:} Next.js, Hardhat, CSS, Solidity,
+	\end{highlights}
+\end{twocolentry}
+Assistant
+\projectcategory{GENAI \& AI AUTOMATIONS }
+
 \begin{twocolentry}{
 		\href{https://leyloon.com/}{Live}
 	}{
 		\textbf{\projecttitle{Leyloon}}
 	}
-\begin{highlights}
-    \item Developed a premium online jewelry platform enabling users to browse and customize bespoke moissanite and lab-grown diamond jewelry.
-    \item Implemented a custom jewelry design engine for selecting stone type, shape, size, and metal for a personalized customer experience.
-    \item Integrated an \textbf{AI jeweler} to guide users through their dream piece design process.
-    \item \textbf{Technologies:} Next.js, Next.js API Routes, TanStack Query, Radix UI, NodeMailer, Anime.js, Context API, VDB API.
-\end{highlights}
-\end{twocolentry}
-\vspace{1em}
-% On point
-\begin{twocolentry}{
-		\href{onpointwebapp.vercel.app/}{Live}
-	}{
-		\textbf{\projecttitle{On Point}}
-	}
 	\begin{highlights}
-		\item Built a full-stack web app acting as a wrapper for IRISCRM, handling complex business logic and CRM integration.
-		\item Implemented cron jobs using \textbf{Inngest} for automated monthly deal imports and calculated rep goals based on PTO and performance.
-        \item Developed a companion mobile app using \textbf{React Native} and \textbf{Nativewind}, integrating APIs from the Next.js backend for a unified experience.
-		\item \textbf{Technologies:} Next.js, React Native, Nativewind, Inngest, Tailwind CSS, IRIS APIs.
+		\item Developed a premium jewelry customization platform with stone, shape, size, and metal selection plus an AI jeweler assistant for guided product discovery.
+		\item \textbf{Technologies:} Next.js, Next.js API Routes, TanStack Query, Radix UI, NodeMailer, Anime.js, Context API, VDB API.
 	\end{highlights}
 \end{twocolentry}
-% \vspace{1em}
-% Blockchain-Based Criminal Information Management System
-
-% Decentralized Chatting App
-% \begin{twocolentry}{
-% 		\href{https://github.com/rogueinnovator/d-chat-app}{GitHub}
-% 	}{
-% 		\textbf{\projecttitle{Decentralized Chatting App}}
-% 	}
-% 	\begin{highlights}
-% 		\item Built a secure, blockchain-based messaging platform ensuring decentralized communication.
-% 		\item Implemented smart contract logic for real-time message validation and storage.
-% 		\item \textbf{Technologies:} Next.js, Hardhat, CSS.
-% 	\end{highlights}
-% \end{twocolentry}
-% \vspace{1em}
-% \begin{twocolentry}{
-% 		\href{https://rogue-innovator.vercel.app/}{Live}
-% 	}{
-% 		\textbf{\projecttitle{Web base Linux inspired OS}}
-% 	}
-% 	\begin{highlights}
-% 		\item Advanced Window Management: Implemented custom hooks to handle drag-and-drop functionality and precise 8-direction window resizing.
-% 		\item Full Terminal Integration: Integrated Xterm.js to build a robust terminal experience that supports standard shell commands and file system navigation.
-% 		\item Chat bot : Gemini powered chat bot that answers all the questions related to my experties
-% 		\item Portfolio Showcase: A unique, interactive way to explore my projects within a simulated operating system environment.
-% 		\item \textbf{Technologies:} Xterm, Svelte, Scss, Gemini API.
-% 	\end{highlights}
-% \end{twocolentry}
-\vspace{1em}
 
 
 % AI-Powered Proposal Generator
 \begin{twocolentry}{
 	}{
-		\textbf{\projecttitle{AI-Powered Proposal Generator \& Portfolio Assistant}}
-	}
-\begin{highlights}
-    \item Architected a RAG-enhanced autonomous system with multiple pipelines to generate highly personalized and high-converting client proposals.
-    \item Developed an asynchronous background ingestion pipeline using Inngest and OpenAI to distill and vectorize project data into a Supabase pgvector database.
-    \item Engineered an autonomous Q\&A interface for semantic portfolio queries, integrated with strict anti-hallucination constraints and zero-jargon safeguards.
-    \item \textbf{Technologies:} Next.js, React 19, Supabase, PostgreSQL, pgvector, OpenAI API, Inngest, Tailwind CSS, shadcn/ui.
-\end{highlights}
-\end{twocolentry}
-\vspace{1em}
-
-% Other Notable Projects
-\begin{twocolentry}{
-	}{
-		\textbf{\projecttitle{Other Notable Projects}}
+		\textbf{\projecttitle{AI-Powered Proposal Generator }}
 	}
 	\begin{highlights}
-		\item \href{https://nomacal.com}{Nomacal} $\vert$ \href{https://creme-xchange.vercel.app/signin}{CremeXchange} $\vert$ \href{https://govio.ai/}{Govio} $\vert$ \href{https://www.aramtours.de/}{Aram Tours} $\vert$ \href{https://e-help-ochre.vercel.app/}{E-Help}
+		\item Architected a RAG-enhanced proposal system with OpenAI ingestion, pgvector search, semantic portfolio Q\&A, and anti-hallucination constraints.
+		\item \textbf{Technologies:} Next.js, React 19, Supabase, PostgreSQL, pgvector, OpenAI API, Inngest, Tailwind CSS, shadcn/ui.
+	\end{highlights}
+\end{twocolentry}
+
+\begin{twocolentry}{
+		\href{https://rogue-innovator.vercel.app/}{Live}
+	}{
+		\textbf{\projecttitle{Web-Based Linux Inspired OS}}
+	}
+	\begin{highlights}
+		\item Created an interactive portfolio OS with window management, Xterm.js terminal integration, and a Gemini-powered expertise chatbot.
+		\item \textbf{Technologies:} Xterm.js, Svelte, SCSS, Gemini API.
+	\end{highlights}
+\end{twocolentry}
+
+\projectcategory{FRONTEND}
+
+\begin{twocolentry}{
+	}{
+		\textbf{\projecttitle{Nomacal}}
+	}
+	\begin{highlights}
+		\item Built a responsive production interface for \href{https://nomacal.com}{Nomacal}.
+	\end{highlights}
+\end{twocolentry}
+
+\begin{twocolentry}{
+	}{
+		\textbf{\projecttitle{CremeXchange}}
+	}
+	\begin{highlights}
+		\item Built responsive frontend screens for \href{https://creme-xchange.vercel.app/signin}{CremeXchange}.
+	\end{highlights}
+\end{twocolentry}
+
+\begin{twocolentry}{
+	}{
+		\textbf{\projecttitle{Govio}}
+	}
+	\begin{highlights}
+		\item Delivered production-ready frontend UI for \href{https://govio.ai/}{Govio}.
+	\end{highlights}
+\end{twocolentry}
+
+\begin{twocolentry}{
+	}{
+		\textbf{\projecttitle{Aram Tours}}
+	}
+	\begin{highlights}
+		\item Built responsive travel websHardhatite UI for \href{https://www.aramtours.de/}{Aram Tours}.
+	\end{highlights}
+\end{twocolentry}
+
+\begin{twocolentry}{
+	}{
+		\textbf{\projecttitle{E-Help}}
+	}
+	\begin{highlights}
+		\item Built a responsive frontend interface for \href{https://e-help-ochre.vercel.app/}{E-Help}.
 	\end{highlights}
 \end{twocolentry}
 
